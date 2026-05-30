@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Package Test Results - Portfolio Signal Quality Auditor</title><style>
+body{font-family:Arial,Helvetica,sans-serif;line-height:1.5;margin:32px;max-width:1120px;color:#1f2933}h1,h2,h3{color:#102a43}table{border-collapse:collapse;width:100%;margin:16px 0}th,td{border:1px solid #bcccdc;padding:8px;text-align:left;vertical-align:top}th{background:#f0f4f8}.note{background:#f8fafc;border-left:4px solid #627d98;padding:12px;margin:16px 0}.tag{display:inline-block;background:#eef2ff;padding:2px 6px;border-radius:4px;font-size:12px}</style></head>
+<body>
+<h1>Package Test Results</h1>
+<p>Repository: <strong>portfolio-signal-quality-auditor</strong></p>
+<div class="note"><strong>Functional test added.</strong> In addition to structural package checks, this quality review now includes a real framework-output test file: <code>quality-review/framework-output-test.html</code>. That file applies the runtime to the 120-row synthetic portfolio scenario and produces a signal-quality audit, issue register, cleanup plan, executive summary, readiness classification, and handoff packet.</div>
+
+<table>
+<thead><tr><th>Check</th><th>Result</th><th>Evidence</th></tr></thead>
+<tbody>
+<tr><td>README exists and is clear</td><td>Pass</td><td>README.md includes title, description, operating problem, installation, usage, adjacent fit, workflow, outputs, and keywords.</td></tr>
+<tr><td>AGENTS.md exists and is under 8,000 characters</td><td>Pass</td><td>AGENTS.md character count: 7681</td></tr>
+<tr><td>chatgpt-project/ exists</td><td>Pass</td><td>Runtime folder exists.</td></tr>
+<tr><td>chatgpt-project/ is flat</td><td>Pass</td><td>No nested runtime folders.</td></tr>
+<tr><td>chatgpt-project/ has 25 files or fewer</td><td>Pass</td><td>Runtime file count: 15</td></tr>
+<tr><td>Runtime files are non-duplicative</td><td>Pass</td><td>Files separate intake, rules, screens, cleanup, handoff, prompts, quality, and privacy controls.</td></tr>
+<tr><td>Install instructions are clear</td><td>Pass</td><td>README instructs users to upload only chatgpt-project/ into ChatGPT and use the full repository for GitHub/Codex/local work.</td></tr>
+<tr><td>Configuration absent or single-file only</td><td>Pass</td><td>No configuration is required.</td></tr>
+<tr><td>HTML config builder exists if configuration is required</td><td>Pass</td><td>Not applicable; configuration is absent.</td></tr>
+<tr><td>Framework functional output test exists</td><td>Pass</td><td>quality-review/framework-output-test.html applies the module to the synthetic portfolio scenario and produces the expected operating outputs.</td></tr>
+<tr><td>Sample data, prompts, and outputs exist</td><td>Pass</td><td>examples/sample-data.html, examples/sample-prompts.html, examples/sample-output.html.</td></tr>
+<tr><td>Mermaid source exists and diagram is embedded in README</td><td>Pass</td><td>workflow/workflow.mmd exists; README.md includes embedded Mermaid workflow.</td></tr>
+<tr><td>Human-read-only files use .html except allowed Markdown exceptions</td><td>Pass</td><td>Violations: None.</td></tr>
+<tr><td>Package is public-safe</td><td>Pass</td><td>Examples use synthetic dummy data only.</td></tr>
+<tr><td>Human accountability is preserved</td><td>Pass</td><td>README, AGENTS.md, and privacy-human-control.md prohibit autonomous approvals, live-system changes, and official determinations.</td></tr>
+<tr><td>Zip opens and preserves folder structure</td><td>Pass</td><td>Verified after archive creation in local package build step.</td></tr>
+</tbody>
+</table>
+
+<h2>Functional output review</h2>
+<p>Pass. The package now includes a functional test output, not only a packaging checklist. The test uses public-safe synthetic portfolio data and demonstrates the framework's intended work product: executive signal-quality summary, findings by screen, issue register, readiness classification, cleanup plan, and downstream handoff packet.</p>
+<h2>Non-overlap review</h2>
+<p>Pass. The module is limited to signal-quality auditing before intake, prioritization, executive review, or operations follow-through. It does not score, approve, sequence, charter, build business cases, run governance meetings, or own system-of-record changes.</p>
+</body></html>

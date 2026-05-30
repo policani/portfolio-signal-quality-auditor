@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Sample Output - Portfolio Signal Quality Auditor</title><style>
+body{font-family:Arial,Helvetica,sans-serif;line-height:1.5;margin:32px;max-width:1120px;color:#1f2933}h1,h2,h3{color:#102a43}table{border-collapse:collapse;width:100%;margin:16px 0}th,td{border:1px solid #bcccdc;padding:8px;text-align:left;vertical-align:top}th{background:#f0f4f8}.note{background:#f8fafc;border-left:4px solid #627d98;padding:12px;margin:16px 0}.tag{display:inline-block;background:#eef2ff;padding:2px 6px;border-radius:4px;font-size:12px}</style></head>
+<body>
+<h1>Sample Output: Signal-Quality Audit</h1>
+<p>This sample output is based on the synthetic data in <code>sample-data.html</code>. It demonstrates structure and judgment pattern only.</p>
+<h2>Executive signal-quality summary</h2>
+<table><tbody>
+<tr><th>Records reviewed</th><td>12 representative records from a synthetic 120-row portfolio scenario</td></tr>
+<tr><th>Overall trust level</th><td><strong>Low to moderate</strong>. The data is useful for cleanup planning, but not yet reliable enough for executive tradeoff decisions or portfolio scoring without remediation.</td></tr>
+<tr><th>Main reporting risk</th><td>Active work may be overstated because several records have stale dates, missing owners or sponsors, unclear readiness, or possible duplication.</td></tr>
+<tr><th>Immediate decision need</th><td>Confirm ownership/sponsorship for P-003, P-008, and P-010; review duplicate candidates P-001/P-002 and P-006/P-007; decide whether P-004 and P-011 should remain active in governance views.</td></tr>
+</tbody></table>
+<h2>Top findings</h2>
+<table><thead><tr><th>ID</th><th>Record</th><th>Finding</th><th>Severity</th><th>Confidence</th><th>Evidence</th><th>Recommended cleanup</th></tr></thead><tbody>
+<tr><td>F-001</td><td>P-003 Vendor Invoice Controls</td><td>Active/shaping work has no confirmed owner or sponsor and target date is past.</td><td>Critical</td><td>High</td><td>Owner = TBD; Sponsor blank; target date 2026-04-30; note says waiting for process owner.</td><td>Assign accountable owner and sponsor, or park until ownership is confirmed.</td></tr>
+<tr><td>F-002</td><td>P-004 Data Warehouse Cleanup</td><td>Status appears stale and may overstate progress.</td><td>High</td><td>High</td><td>Status = On Track; last updated 2026-01-09; target date 2026-03-31.</td><td>Confirm current state, update status, and determine whether it remains active.</td></tr>
+<tr><td>F-003</td><td>P-001 / P-002</td><td>Possible duplicate or overlapping demand.</td><td>High</td><td>Medium</td><td>Similar portal refresh/modernization scope, same owner, same sponsor, same target date.</td><td>Human review to confirm whether these should merge, link, or remain separate.</td></tr>
+<tr><td>F-004</td><td>P-008 Access Review Automation</td><td>At-risk work is missing sponsor.</td><td>High</td><td>High</td><td>Sponsor blank; status = At Risk; security review required.</td><td>Confirm sponsor and escalation path before executive reporting.</td></tr>
+<tr><td>F-005</td><td>P-006 Renewal Reporting Dashboard</td><td>KPI hygiene is weak.</td><td>Medium</td><td>High</td><td>KPI = Dashboard usage; definition not documented.</td><td>Define usage metric, baseline, target, owner, source, and cadence.</td></tr>
+</tbody></table>
+<h2>Readiness classification</h2>
+<table><thead><tr><th>Classification</th><th>Records</th><th>Routing guidance</th></tr></thead><tbody>
+<tr><td>Ready for scoring</td><td>P-006, pending KPI clarification</td><td>Send to Portfolio Prioritization Scoring Agent only after KPI definition is cleaned.</td></tr>
+<tr><td>Intake-needed / shaping</td><td>P-003, P-005, P-007, P-010, P-012</td><td>Send to Portfolio Intake and Readiness Triage System.</td></tr>
+<tr><td>Active governed work</td><td>P-001, P-002, P-004, P-008</td><td>Send cleanup actions and status-confirmation tasks to PMO Governance Operations Log.</td></tr>
+<tr><td>Closeout / archive candidate</td><td>P-009, P-011</td><td>Human confirmation required before closure, archive, or removal from active views.</td></tr>
+</tbody></table>
+<h2>Cleanup plan</h2>
+<ol>
+<li><strong>Wave 1: Decision blockers.</strong> Confirm owners/sponsors for P-003, P-008, P-010; resolve P-001/P-002 and P-006/P-007 duplicate review.</li>
+<li><strong>Wave 2: Governance hygiene.</strong> Update stale records P-004 and P-011; clarify readiness for P-005 and P-009.</li>
+<li><strong>Wave 3: Reporting improvement.</strong> Define KPI baselines, targets, owners, and cadence for P-001, P-002, P-006, P-007, P-009, and P-010.</li>
+</ol>
+<h2>Downstream handoff</h2>
+<table><thead><tr><th>Destination</th><th>Send</th><th>Do not send</th></tr></thead><tbody>
+<tr><td>Portfolio Intake and Readiness Triage System</td><td>Raw, shaping, and unclear-readiness items.</td><td>Records with unresolved duplicate status unless clearly labeled.</td></tr>
+<tr><td>Portfolio Prioritization Scoring Agent</td><td>Only records with confirmed owner, sponsor, scope, value logic, and readiness.</td><td>P-003, P-007, P-010, P-012 until clarified.</td></tr>
+<tr><td>Executive Portfolio Review Pack Builder</td><td>Trust level, reporting-risk summary, and decision asks.</td><td>Unvalidated record-level assumptions as facts.</td></tr>
+<tr><td>PMO Governance Operations Log</td><td>Cleanup actions, owners to confirm, stale-status follow-ups, duplicate review tasks.</td><td>Official status changes unless a human owner has approved them.</td></tr>
+</tbody></table>
+</body></html>

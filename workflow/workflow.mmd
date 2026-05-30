@@ -1,0 +1,40 @@
+flowchart TD
+    A[Portfolio source provided
+spreadsheet, Jira export, Smartsheet, deck, or project list] --> B[Intake and context check
+source, date, owner, portfolio scope]
+    B --> C{Enough fields to audit?}
+    C -- No --> C1[Request minimum fields
+name, owner, sponsor, status, dates, readiness, KPI fields]
+    C1 --> B
+    C -- Yes --> D[Signal quality review]
+    D --> E[Field quality screen
+missing, inconsistent, invalid, ambiguous]
+    D --> F[Stale status screen
+old dates, stalled work, active-but-aging]
+    D --> G[Ownership and sponsorship screen
+missing, conflicting, orphaned]
+    D --> H[Duplicate demand screen
+similar names, same outcome, same sponsor]
+    D --> I[Readiness classification
+intake, shaping, ready, active, blocked, parked]
+    D --> J[KPI hygiene screen
+definition drift, missing baselines, weak measures]
+    E --> K[Issue register]
+    F --> K
+    G --> K
+    H --> K
+    I --> K
+    J --> K
+    K --> L[Cleanup plan
+owners, actions, sequence, decision needs]
+    L --> M[Executive signal-quality summary
+trust level, reporting risk, decisions needed]
+    M --> N{Downstream handoff}
+    N --> O[Portfolio Intake and Readiness Triage System
+cleaned or classified demand]
+    N --> P[Portfolio Prioritization Scoring Agent
+scorable candidates only]
+    N --> Q[Executive Portfolio Review Pack Builder
+implications and decision asks]
+    N --> R[PMO Governance Operations Log
+cleanup actions and follow-through]

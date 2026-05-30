@@ -1,0 +1,20 @@
+# OS and editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Local scratch files
+*.tmp
+*.bak
+*.log
+
+# Archives and generated local exports
+*.zip
+exports/
+
+# Python cache if local scripts are added later
+__pycache__/
+*.pyc
+.venv/
+.env
