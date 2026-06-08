@@ -234,6 +234,10 @@ portfolio-signal-quality-auditor/
 
 This module supports intake, classification, review, synthesis, routing, drafting, and quality review. Human owners remain accountable for status changes, sponsor confirmation, prioritization, funding, sequencing, KPI definitions, record cleanup, compliance decisions, executive decisions, and changes to live systems.
 
+## License
+
+Source code and scripts are licensed under MIT. Documentation, prompts, templates, examples, and other non-code materials are licensed under CC BY 4.0 with attribution to Marco Policani. See `LICENSE.md`.
+
 ## Search keywords
 
 portfolio signal quality auditor, portfolio hygiene audit, PMO data quality, portfolio governance, project portfolio management, portfolio reporting risk, stale status review, duplicate demand review, portfolio readiness classification, KPI hygiene, executive portfolio review, PMO cleanup plan, AI-assisted PMO, ChatGPT Project PMO toolkit, portfolio inventory audit, governance signal review.
